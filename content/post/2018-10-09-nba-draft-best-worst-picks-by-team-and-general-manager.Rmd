@@ -1,13 +1,12 @@
 ---
 title: NBA Draft - Best/Worst Picks by Team and General Manager
 author: Robert Huang
-date: '2018-10-09'
+date: '2018-10-10'
 slug: nba-draft-best-worst-picks-by-team-and-general-manager
 categories: []
 tags:
   - NBA
   - NBA Draft
-draft: true
 ---
 
 ```{r setup, include = FALSE}
