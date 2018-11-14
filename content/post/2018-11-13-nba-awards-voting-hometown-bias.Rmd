@@ -267,8 +267,10 @@ team.plot <- ggplot(team.sum, aes(x = n, y = mean, text = Voters)) +
   labs(x = "Number of Voters", y = "Mean Score") +
   theme_bw()
 
-team.plot <- ggplotly(team.plot, tooltip = c("text"))
-htmltools::div(hide_legend(team.plot), align = "center")
+team.plot
+
+# team.plot <- ggplotly(team.plot, tooltip = c("text"))
+# htmltools::div(hide_legend(team.plot), align = "center")
 
 ```
 
