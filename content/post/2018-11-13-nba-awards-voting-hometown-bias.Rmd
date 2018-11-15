@@ -89,8 +89,8 @@ lawler.cols <- team.colors %>%
 kable(lawler.ex, digits = 2) %>%
   kable_styling(bootstrap_options = c("bordered"),
                 full_width = FALSE) %>%
-  row_spec(lawler.clips, bold = TRUE, color = lawler.cols$hex2, 
-           background = lawler.cols$hex1)
+  row_spec(lawler.clips, bold = TRUE, color = lawler.cols$hex1, 
+           background = lawler.cols$hex2)
 
 ```
 
@@ -361,8 +361,8 @@ ind.ballot.fun <- function(cur.voter, cur.team, cur.rank) {
     kable(digits = 2) %>%
     kable_styling(bootstrap_options = c("bordered"), 
                   full_width = FALSE) %>%
-    row_spec(bal.team, bold = TRUE, color = bal.col$hex2, 
-             background = bal.col$hex1)
+    row_spec(bal.team, bold = TRUE, color = bal.col$hex1, 
+             background = bal.col$hex2)
   
   # results, kable
   result.team <- which(out2$Team %in% cur.team)
@@ -372,8 +372,8 @@ ind.ballot.fun <- function(cur.voter, cur.team, cur.rank) {
     kable(digits = 2) %>%
     kable_styling(bootstrap_options = c("bordered"), 
                   full_width = FALSE) %>%
-    row_spec(result.team, bold = TRUE, color = bal.col$hex2, 
-             background = bal.col$hex1)
+    row_spec(result.team, bold = TRUE, color = bal.col$hex1, 
+             background = bal.col$hex2)
   
   # print(title.bal)
   # print(out1)
