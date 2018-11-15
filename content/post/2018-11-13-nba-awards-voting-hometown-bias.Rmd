@@ -46,7 +46,7 @@ team.aff.table <- ballots %>%
   rename(Year = year)
 
 kable(team.aff.table, digits = 2) %>%
-  kable_styling(bootstrap_options = c("striped", "bordered", "condensed"),
+  kable_styling(bootstrap_options = c("bordered"),
                 full_width = FALSE)
 
 ```
@@ -87,7 +87,7 @@ lawler.cols <- team.colors %>%
   filter(Abbreviation %in% "LAC")
 
 kable(lawler.ex, digits = 2) %>%
-  kable_styling(bootstrap_options = c("striped", "bordered", "condensed"),
+  kable_styling(bootstrap_options = c("bordered"),
                 full_width = FALSE) %>%
   row_spec(lawler.clips, bold = TRUE, color = lawler.cols$hex2, 
            background = lawler.cols$hex1)
@@ -117,7 +117,7 @@ lawler.ex2 <- ballots.home %>%
          `Place Differential` = diff.place)
 
 kable(lawler.ex2, digits = 2) %>%
-  kable_styling(bootstrap_options = c("striped", "bordered", "condensed"), 
+  kable_styling(bootstrap_options = c("bordered"), 
                 full_width = FALSE)
 
 ```
@@ -194,8 +194,9 @@ final.summary.z <- final.summary.z %>%
 ### table of all voters
 # also include whether they had ballots each year
 homer.sort <- final.summary.z %>%
-  select(Voter, Team.Aff, Role, n, avg, n.pre, avg.pre, n.post, avg.post) %>%
-  arrange(-avg)
+  arrange(-avg) %>%
+  mutate(Rank = row_number()) %>%
+  select(Rank, Voter, Team.Aff, Role, n, avg, n.pre, avg.pre, n.post, avg.post)
 
 # adding ballot by year
 homer.sort <- homer.sort %>%
@@ -207,7 +208,10 @@ homer.sort <- homer.sort %>%
          `Post N` = n.post,
          `Post Score` = avg.post)
 
-datatable(homer.sort, class = "cell-border stripe", options = list(dom = "lftp")) %>%
+datatable(homer.sort, class = "cell-border nowrap",
+          rownames = FALSE,
+          options = list(dom = "lftp",
+                         scrollX = TRUE)) %>%
   formatRound(columns = c("Score", "Pre Score", "Post Score"))
 
 ```
@@ -336,7 +340,7 @@ ind.ballot.fun <- function(cur.voter, cur.team, cur.rank) {
     filter(id %in% ind.ballots$id[ind.ballots$Voter == cur.voter][cur.rank] &
            (team == cur.team|rank <= 5)) %>%
     select(rank, everything(), -id) %>%
-    rename('Actual Finish' = rank,
+    rename(Actual = rank,
            Player = value,
            Team = team,
            Pts = pts,
@@ -355,7 +359,7 @@ ind.ballot.fun <- function(cur.voter, cur.team, cur.rank) {
   out1 <- out1 %>%
     select(-(Voter:award)) %>%
     kable(digits = 2) %>%
-    kable_styling(bootstrap_options = c("striped", "bordered", "condensed"), 
+    kable_styling(bootstrap_options = c("bordered"), 
                   full_width = FALSE) %>%
     row_spec(bal.team, bold = TRUE, color = bal.col$hex2, 
              background = bal.col$hex1)
@@ -366,7 +370,7 @@ ind.ballot.fun <- function(cur.voter, cur.team, cur.rank) {
   out2 <- out2 %>%
     select(-(year:award)) %>%
     kable(digits = 2) %>%
-    kable_styling(bootstrap_options = c("striped", "bordered", "condensed"), 
+    kable_styling(bootstrap_options = c("bordered"), 
                   full_width = FALSE) %>%
     row_spec(result.team, bold = TRUE, color = bal.col$hex2, 
              background = bal.col$hex1)
