@@ -50,7 +50,7 @@ We start by plotting every restaurant that has been mentioned by Gold using a ma
 ```{r}
 
 # google map centered on central LA
-load(file = "data (public)//la_roadmap.RData")
+load(file = "data (public)//jonathan gold mapped//la_roadmap.RData")
 
 la.gmap <- ggmap(la.roadmap) +
   theme(axis.title = element_blank(),
@@ -71,11 +71,12 @@ Most of Gold's restaurants are located near the center of the map, corresponding
 ```{r, results = "hide"}
 
 # regions
-la.neigh <- read.csv("data (public)//la neighborhoods.csv", stringsAsFactors = FALSE)
+la.neigh <- read.csv("data (public)//jonathan gold mapped//la neighborhoods.csv",
+                     stringsAsFactors = FALSE)
 
 
 ### neighborhood shapes
-la.neigh.shp <- st_read("data (public)//la_county.shp//la_county.shp")
+la.neigh.shp <- st_read("data (public)//jonathan gold mapped//la_county.shp//la_county.shp")
 
 # fix entry with special character
 la.neigh.shp$Name <- as.character(la.neigh.shp$Name)
