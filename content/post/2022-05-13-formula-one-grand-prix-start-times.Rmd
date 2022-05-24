@@ -1,12 +1,10 @@
 ---
-title: Formula One Grand Prix Start Times
-author: Robert Huang
+title: "Formula One Grand Prix Start Times"
+author: "Robert Huang"
 date: '2022-05-13'
 slug: formula-one-grand-prix-start-times
-categories:
-  - f1
-tags:
-  - f1
+categories: f1
+tags: f1
 ---
 
 ```{r setup, include = FALSE}
