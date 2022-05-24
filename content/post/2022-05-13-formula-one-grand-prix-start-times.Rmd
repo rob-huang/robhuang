@@ -95,8 +95,6 @@ race.cont <- race.add %>%
 
 ```
 
-## R Markdown
-
 Formula One is an international racing series with Grand Prix held across the globe. The race calendar has expanded and moved around throughout the years, with a previously European-heavy lineup now being supplemented with more Middle Eastern/Asian and American events. Races generally start off in the afternoon, but there are locations that now feature night races. How many races fans get to easily experience live depends on where they live. We look at cities in different time zones throughout the world to find out how many races can be enjoyed during reasonable hours without the need of having to be up at odd hours of the day and night. Which fan bases have a schedule catered for them? Has this changed during the last few years as event locations and start times have been revised?
 
 The [Ergast](http://ergast.com/mrd/) database provides start times for Grand Prix since 2005, which can be converted to corresponding local times for specific time zones. These local start times can then be grouped into intervals based on how desirable they are for viewing at home. Prime hours are the most preferable. Early and late hours are slightly outside regular television times but in which people are likely to be awake for. To be able to catch races that start during sleep hours, people are required to go out of their ways and readjust their sleep schedules. The following table defines the groupings we will use:
