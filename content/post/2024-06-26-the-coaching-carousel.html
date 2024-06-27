@@ -24,7 +24,7 @@ tags:
 <h3>Stint Lengths</h3>
 <table class="table table-striped table-hover" style="width: auto !important; margin-left: auto; margin-right: auto;">
 <caption>
-(#tab:stint_sum)
+<span id="tab:stintSum">Table 1: </span>
 <center>
 Overall summary of stint lengths for each league
 </center>
@@ -241,10 +241,10 @@ epl
 </tr>
 </tbody>
 </table>
-<p><img src="/post/2024-06-26-the-coaching-carousel_files/figure-html/stint_hist-1.png" width="864" style="display: block; margin: auto;" /></p>
+<p><img src="/post/2024-06-26-the-coaching-carousel_files/figure-html/stintHist-1.png" width="864" style="display: block; margin: auto;" /></p>
 <p>To begin, we look at the overall summary of coach stint lengths by sport, including stints that are active up to the 2023 season. College basketball (cbbm) and college football (cfb) have the longest tenured head coaches, with mean values of 5 and 4.7 seasons, respectively. No professional sport comes close to this. The high standard deviations for these 2 leagues are because a number of college coaches have especially long reigns, as seen in the histograms of stint lengths. The NFL is the leading professional league, with stint lengths of 3.3 seasons. The MLB and NBA are middle of the pack with coaches holding positions for a little over 2.5 seasons. The WNBA is surprisingly not far behind given that the league was established only in 1997, having had less time for coaches to generate long lengths to drive up its averages. Among the older leagues, the NHL lags slightly, with a median under 2. The EPL is far behind every other league, with a mean under 2 and a median of just 1 season. The league was established in the 1992-93 season, but seasons managed for the same team in the predecessor league are included. Any seasons spent in leagues below the Premier League are also included as long at they’re part of the same stint with the team. New teams entering the EPL will not have an artificial effect in driving the numbers down.</p>
-<p><img src="/post/2024-06-26-the-coaching-carousel_files/figure-html/stint_ind_fac-1.png" width="864" style="display: block; margin: auto;" /></p>
-<p><img src="/post/2024-06-26-the-coaching-carousel_files/figure-html/stint_comp-1.png" width="864" style="display: block; margin: auto;" /></p>
+<p><img src="/post/2024-06-26-the-coaching-carousel_files/figure-html/stintIndFac-1.png" width="864" style="display: block; margin: auto;" /></p>
+<p><img src="/post/2024-06-26-the-coaching-carousel_files/figure-html/stintComp-1.png" width="864" style="display: block; margin: auto;" /></p>
 <p>We’ll separate out the results by year to see if there are trends in mean stint lengths over time (first plot above). For less-cluttered comparisons between leagues, a second plot combines the leagues and shows 5-year rolling means instead of the actual season values. Since the 1950s, the two college leagues have generally had the longest tenured coaches, with men’s basketball on top most years and football running second. For college basketball, the noticeable declines in average stint lengths in the 1940s and 1970s were because of rapid additions of new schools, and thus new coaches starting at year 1, into Division I. For this analysis, years coached for non-Division I seasons are not counted even if the same coach persisted through the move up to the new league. It’s not surprising that college sports have coaches with longer reigns given the power and responsibilities of the coaches compared to their counterparts in the professional leagues. College head coaches are both coach and general manager, responsible for the recruitment of their rosters. Making a coaching change can lead to roster upheaval, unlike in professional sports where players are under binding contracts and not completely attached to coaches.</p>
 <p>Since the 1970s, the NFL has been the professional league that keeps their coaches for the most amount of time. This may have to do with the NFL having the shortest regular season among all the pro leagues. Its 4 month/17 game season is shorter than the 6 month seasons for the NBA, MLB, and NHL (82, 162, and 82 games, respectively). There’s a much greater chance of sustaining losing streaks that result in job dismissals in a long NBA/MLB/NHL season than in a more compact NFL season.</p>
 <p>Pre-1950s, the MLB was among the leagues with the largest stint lengths. The was almost solely driven by Connie Mack, who coached the Philadelphia Athletics for 50 seasons from 1901 to 1950. We see how big of an effect Mack’s retirement had with MLB’s mean stint value falling from 5.8 in 1950 to 2.2 in 1951. Lou Boudreau’s firing after 9 seasons with the Cleveland Indians in the same year also had an effect. Since then, the MLB has pretty much been in line with the NFL and NBA.</p>
@@ -253,7 +253,7 @@ epl
 <p>The NHL is the domestic league with the shortest term coaches, averaging about 2.8 or 2.9 seasons in the last few years. This is actually an improvement over the 1990s when coaches were averaging under 2 seasons on the job. Only the recent chaos of the EPL has prevented the NHL from bringing up the rear in this stat.</p>
 <table class="table table-striped table-hover" style="width: auto !important; margin-left: auto; margin-right: auto;">
 <caption>
-(#tab:stint_long)
+<span id="tab:stintLong">Table 2: </span>
 <center>
 Seasons with the largest average stint lengths
 </center>
@@ -522,7 +522,7 @@ cbbm
 <p>The NHL’s 1947 season is the league’s single representative on the list, but there were only 6 active teams in hockey during that year.</p>
 <table class="table table-striped table-hover" style="width: auto !important; margin-left: auto; margin-right: auto;">
 <caption>
-(#tab:stint_long_1980)
+<span id="tab:stintLong1980">Table 3: </span>
 <center>
 Seasons since 1980 with the largest average stint lengths
 </center>
@@ -790,13 +790,13 @@ cfb
 </div>
 <div id="coaching-changes" class="section level3">
 <h3>Coaching Changes</h3>
-<p><img src="/post/2024-06-26-the-coaching-carousel_files/figure-html/any_change_ind_fac-1.png" width="864" style="display: block; margin: auto;" /></p>
-<p><img src="/post/2024-06-26-the-coaching-carousel_files/figure-html/any_change_comp-1.png" width="864" style="display: block; margin: auto;" /></p>
+<p><img src="/post/2024-06-26-the-coaching-carousel_files/figure-html/anyChangeIndFac-1.png" width="864" style="display: block; margin: auto;" /></p>
+<p><img src="/post/2024-06-26-the-coaching-carousel_files/figure-html/anyChangeComp-1.png" width="864" style="display: block; margin: auto;" /></p>
 <p>An alternate way of looking at the data is to calculate the percent of teams that had at least one coaching change across a season, whether before the season began or during it. This includes new hires during the offseason and mid-season replacements. In this case, we’re also counting new teams entering a season as having a coaching change (except for teams promoted into the EPL). Under this method, the effect of outlier coaches/managers with extremely long stints are removed — as previously covered, see how Connie Mack’s 50 seasons with the Athletics drove up MLB’s coaching numbers in the 1940s.</p>
 <p>As with stint lengths, we plot both the season values and 5-year rolling means. Results are very similar to what we saw with the stint length data. College basketball shows the least amount of turnover, with under 20% of teams changing coaches most seasons. College football showed similar rates to college basketball, but turnover has increased to between 25% and 30% since 2010. This may be because of football coaches leaving their positions before bowl games in recent years. College also shows less variation across years than pro leagues, likely due to the large number of teams in the league — over 300 for basketball and 100 for football. The NBA, NFL and MLB have been close to 20% and 30% in recent seasons. Of the older professional leagues, the NHL has shown more coaching turnover than the NBA, MLB, and NFL, with many seasons over 40%. The EPL is the most chaotic league, with between 40% and 65% of clubs making managerial changes in 10 of the last 11 seasons.</p>
 <table class="table table-striped table-hover" style="width: auto !important; margin-left: auto; margin-right: auto;">
 <caption>
-(#tab:any_change_most)
+<span id="tab:anyChangeMost">Table 4: </span>
 <center>
 Seasons since 1980 with the most coaching changes
 </center>
@@ -997,12 +997,12 @@ nhl
 </div>
 <div id="midseason-coaching-changes" class="section level3">
 <h3>Midseason Coaching Changes</h3>
-<p><img src="/post/2024-06-26-the-coaching-carousel_files/figure-html/mid_change_ind_fac-1.png" width="864" style="display: block; margin: auto;" /></p>
-<p><img src="/post/2024-06-26-the-coaching-carousel_files/figure-html/mid_change_comp-1.png" width="864" style="display: block; margin: auto;" /></p>
+<p><img src="/post/2024-06-26-the-coaching-carousel_files/figure-html/midChangeIndFac-1.png" width="864" style="display: block; margin: auto;" /></p>
+<p><img src="/post/2024-06-26-the-coaching-carousel_files/figure-html/midChangeComp-1.png" width="864" style="display: block; margin: auto;" /></p>
 <p>Instead of looking at all coaching changes in a season, we can filter to just in-season ones. This only includes coaches that get fired or resign sometime during the middle of the season, generally as a result of poor performance, rarely because of them taking other jobs. Again we plot both the season values and 5-year rolling means. From the graphs, we see that mid-season changes seldom occur in college basketball. The most that it has ever happened was in 2023, when 10 of the 363 schools — just 2.75% — had some type of mid-season change. College football was in a similar position — even more stable than basketball in many years — before jumping up to about 8% or 9% in recent years. It’s now close to the rates seen in the WNBA, NFL, MLB, and NBA. The NHL has generally been higher than the previously mentioned leagues, with around 17% of teams making changes during the season. The EPL stands above all though, with recent seasons having over 30% of teams changing managers in-season. This is more than twice as often as the next highest league.</p>
 <table class="table table-striped table-hover" style="width: auto !important; margin-left: auto; margin-right: auto;">
 <caption>
-(#tab:mid_change_most)
+<span id="tab:midChangeMost">Table 5: </span>
 <center>
 Seasons with the most in-season coaching changes
 </center>
@@ -1224,7 +1224,7 @@ nba
 <h4>Which coaches/managers had the longest tenures?</h4>
 <table class="table table-striped table-hover" style="width: auto !important; margin-left: auto; margin-right: auto;">
 <caption>
-(#tab:long_det)
+<span id="tab:longDet">Table 6: </span>
 <center>
 Coaches with the longest tenures
 </center>
@@ -1457,7 +1457,7 @@ Phog Allen
 <p>Next, a couple of fun facts from the data. First, we have the 10 longest coaching tenures overall. Connie Mack’s unbroken 50 season stint — technically 49.2 — with the Philadelphia Athletics is the longest of any coach in our database. Rankings from 2 to 26 are all college basketball or college football coaches, with stint lengths ranging from 46.8 to 30.0 seasons, not a shock given the whole of the results from our analysis. It is not until position 27 — John McGraw’s 29.1 season run with the New York Giants — that we see a professional coach again.</p>
 <table class="table table-striped table-hover" style="width: auto !important; margin-left: auto; margin-right: auto;">
 <caption>
-(#tab:long_lg_det)
+<span id="tab:longLgDet">Table 7: </span>
 <center>
 Each league’s longest tenured coach/manager
 </center>
