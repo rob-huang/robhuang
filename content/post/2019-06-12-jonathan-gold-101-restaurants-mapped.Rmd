@@ -184,6 +184,7 @@ Zooming in on Central Los Angeles and the Westside gives a clearer look at the m
 la.neigh.bound <- c(-118.5, -118.2, 33.98, 34.15)
 
 la.neigh.shp %>%
+  st_zm() %>% 
   ggplot() +
   geom_sf(size = 0.25, color = "gray") +
   geom_text(data = la.neigh.shp %>%
@@ -251,6 +252,7 @@ la.gmap +
 ### zoom on central LA - ignore points outside of map
 # density - still open
 la.neigh.shp %>%
+  st_zm() %>% 
   ggplot() +
   geom_sf(size = 0.25, color = "gray") +
   geom_text(data = la.neigh.shp %>%
@@ -295,6 +297,7 @@ la.gmap +
 
 ### zoom on central LA - facet on year
 la.neigh.shp %>%
+  st_zm() %>% 
   ggplot() +
   geom_sf(size = 0.25, color = "gray") +
   stat_density2d(data = rest,
@@ -333,6 +336,7 @@ every.year <- rest %>%
 
 ### plot all time restaurants
 la.neigh.shp %>%
+  st_zm() %>% 
   ggplot() +
   geom_sf(size = 0.25, color = "gray") +
   geom_text(data = la.neigh.shp %>%
