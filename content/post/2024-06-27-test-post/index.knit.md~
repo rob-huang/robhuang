@@ -1,0 +1,44 @@
+---
+title: test post
+author: Robert Huang
+date: '2024-06-27'
+slug: test-post
+categories: []
+tags: []
+---
+
+
+
+## Background
+
+In recent years, the Sacramento Kings used top 10 draft picks on Thomas Robinson, Ben McLemore, and Jimmer Freddette (I would have included Georgios Papagiannis, but he went 13th). The San Antonio Spurs, on the other hand, were able to get Kawhi Leonard at 15, Tony Parker at 28, and Manu Ginobili at 57. Is all of this luck or are there certain teams or front offices that are more skilled at drafting than others? Are there incompetent teams that continually fail in finding talent through the draft. We will attempt to find the best and worst draft picks and whether they fall to particular teams/executives more often than others.
+
+For this analysis, we will look at NBA drafts from 1980 to 2013. To measure whether a player is a value-plus or -minus pick, we have to assign values to players. There are numerous advanced statistics that attempt to give a player’s worth using just one number, but we will use Basketball Reference’s [Win Shares](https://www.basketball-reference.com/about/ws.html) (WS). Data used will be only for the regular season and current as of the 2017-18 season. For each player, value will be defined as the WS total for their first five seasons since being drafted. The first five seasons are used instead of career WS because doing so will lead to a lot of incomplete data. There are two players from the 1998 draft still active going into the 2018-19 season (Dirk Nowitzki and Vince Carter). Limiting the dataset to only drafts where all players have complete careers will nearly cut the data at hand in half (it also makes this less fun without more current players). Five seasons of WS data already has a strong correlation with career WS, giving a pretty good picture of a player’s value. Note that international draft-and-stash players, guys that are drafted but stay overseas for one or more seasons before coming over to the NBA, are given values of 0 for any seasons where they did not play in any games. Also, only picks from 1 up to 60 are considered.
+
+
+## Draft Picks - Expected Value
+
+With values for every player from each draft from 1980 to 2013, we can work to establish expected values for each pick. The following plot shows WS and draft position for every pick from the 34 drafts used. There is a general decreasing trend in player values as the picks get worse, with the red line tracing the mean WS values for each pick. Obviously, any pick is more valuable than any pick that comes after it. A naive method for evaluating players that have most outperformed or underperformed their draft number is to compare their WS to the average WS for all players picked at the same position. This ignores two underlying characteristics of the graph.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
