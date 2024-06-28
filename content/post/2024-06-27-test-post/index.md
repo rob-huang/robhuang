@@ -1,8 +1,8 @@
 ---
-title: test post
-author: Package Build
-date: '2024-06-27'
-slug: test-post
+title: "test post"
+author: "Package Build"
+date: "2024-06-27"
+slug: "test-post"
 categories: []
 tags: []
 ---
